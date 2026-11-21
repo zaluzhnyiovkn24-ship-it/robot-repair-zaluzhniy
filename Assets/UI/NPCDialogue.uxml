@@ -1,0 +1,5 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement name="Background" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); width: 100%; height: 100%; background-image: url(&quot;project://database/Assets/_2DAdventureGame/Art/Ruby/UI/UIDialogueBox.png?fileID=21300000&amp;guid=c4592e9bd029fcc45843314f2192f59e&amp;type=3#UIDialogueBox&quot;);">
+        <ui:Label text="Станція мовчить. Три сторожові зламані: кидай у них деталі клавішею C, і зв&apos;язок повернеться. Обходь калюжі палива." name="DialogueText" style="width: 100%; height: 100%; padding: 30px 45px; font-size: 32px; white-space: normal; color: rgb(255, 255, 255); -unity-font-style: bold; -unity-font-definition: url(&quot;project://database/Assets/_2DAdventureGame/Tutorial_Demo/TextMesh%20Pro/Fonts/LiberationSans.ttf?fileID=12800000&amp;guid=e3265ab4bf004d28a9537516768c1c75&amp;type=3#LiberationSans&quot;);" />
+    </ui:VisualElement>
+</ui:UXML>

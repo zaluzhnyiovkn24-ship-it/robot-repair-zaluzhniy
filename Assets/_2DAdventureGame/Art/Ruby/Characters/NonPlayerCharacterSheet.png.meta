@@ -1,5 +1,12 @@
 fileFormatVersion: 2
 guid: 255841382d607e24a8317d9ab167f414
+AssetOrigin:
+  serializedVersion: 1
+  productId: 271239
+  packageName: 'Unity Learn | 2D Adventure Game: Robot Repair'
+  packageVersion: 2.0.0
+  assetPath: Assets/_2DAdventureGame/Art/Ruby/Characters/NonPlayerCharacterSheet.png
+  uploadId: 832758
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -136,19 +143,63 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 512
-        height: 512
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        y: 256
+        width: 256
+        height: 256
+      alignment: 9
+      pivot: {x: 0.27, y: 0.08}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: becbd8f1e84bd469a9a0a18963899b03
+      spriteID: 76350666e621e984b919aae7518728a5
       internalID: -848373059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NonPlayerCharacterSheet_1
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 256
+        width: 256
+        height: 256
+      alignment: 9
+      pivot: {x: 0.27, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5b72a6c12748c1459ef4dd239630af3
+      internalID: -473147942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NonPlayerCharacterSheet_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 256
+        height: 256
+      alignment: 9
+      pivot: {x: 0.27, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4bc6db0df1af797489f0e8666e05808d
+      internalID: -1003599395
       vertices: []
       indices: 
       edges: []
@@ -168,15 +219,10 @@ TextureImporter:
       entries: []
     nameFileIdTable:
       NonPlayerCharacterSheet_0: -848373059
+      NonPlayerCharacterSheet_1: -473147942
+      NonPlayerCharacterSheet_2: -1003599395
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 
-AssetOrigin:
-  serializedVersion: 1
-  productId: 271239
-  packageName: 'Unity Learn | 2D Adventure Game: Robot Repair'
-  packageVersion: 2.0.0
-  assetPath: Assets/_2DAdventureGame/Art/Ruby/Characters/NonPlayerCharacterSheet.png
-  uploadId: 832758
