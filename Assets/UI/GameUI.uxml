@@ -1,0 +1,15 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:Template name="NPCDialogue" src="project://database/Assets/UI/NPCDialogue.uxml?fileID=9197481963319205126&amp;guid=5623a1a55ff24ef581ec09416d48fb63&amp;type=3#NPCDialogue" />
+    <ui:Template name="EndScreen" src="project://database/Assets/UI/EndScreen.uxml?fileID=9197481963319205126&amp;guid=3b0c8c85721a4e9792df1f2b93873fa0&amp;type=3#EndScreen" />
+    <ui:VisualElement name="HealthBarBackground" style="flex-grow: 0; background-image: url(&quot;project://database/Assets/_2DAdventureGame/Art/Ruby/UI/UIHealthFrame.png?fileID=21300000&amp;guid=e04807cd45105ec409b00463fe6ab7b1&amp;type=3#UIHealthFrame&quot;); width: 346px; height: 165px; -unity-background-scale-mode: scale-to-fit; position: absolute; top: 20px; left: 20px;">
+        <ui:VisualElement name="HealthBarContainer" style="flex-grow: 1; position: absolute; top: 52px; left: 144px; width: 189px; height: 52px;">
+            <ui:VisualElement name="HealthBar" style="flex-grow: 1; width: 100%; height: 100%; background-image: url(&quot;project://database/Assets/_2DAdventureGame/Art/Ruby/UI/UIHealthBar.png?fileID=21300000&amp;guid=be3322f3a1dbc6e44b25b63f3bb91e16&amp;type=3#UIHealthBar&quot;); -unity-background-scale-mode: stretch-to-fill;" />
+        </ui:VisualElement>
+        <ui:VisualElement name="CharacterPortrait" style="flex-grow: 1; position: absolute; top: 12px; left: 20px; width: 152px; height: 135px; background-image: url(&quot;project://database/Assets/_2DAdventureGame/Art/Ruby/UI/CharacterPortrait.png?fileID=21300000&amp;guid=374193bc7008fa34ab9b2bbca376937b&amp;type=3#CharacterPortrait&quot;); -unity-background-scale-mode: scale-to-fit;" />
+    </ui:VisualElement>
+    <ui:VisualElement name="FixedCounter" picking-mode="Ignore" style="flex-grow: 0; position: absolute; top: 20px; right: 20px; width: 360px; height: 180px; background-image: url(&quot;project://database/Assets/_2DAdventureGame/Art/UICounterBar.png?fileID=21300000&amp;guid=4bb9e5210d4bc484ab335c62e1e0ffd3&amp;type=3#UICounterBar&quot;); -unity-background-scale-mode: scale-to-fit;">
+        <ui:Label text="Полагоджено 0 / 3" name="FixedCounterLabel" style="flex-grow: 1; font-size: 30px; -unity-text-align: middle-center; -unity-font-style: bold; color: rgb(255, 255, 255); -unity-font-definition: url(&quot;project://database/Assets/_2DAdventureGame/Tutorial_Demo/TextMesh%20Pro/Fonts/LiberationSans.ttf?fileID=12800000&amp;guid=e3265ab4bf004d28a9537516768c1c75&amp;type=3#LiberationSans&quot;);" />
+    </ui:VisualElement>
+    <ui:Instance template="NPCDialogue" name="NPCDialogue" style="position: absolute; top: 70%; right: 10%; bottom: 0; left: 10%;" />
+    <ui:Instance template="EndScreen" name="EndScreen" picking-mode="Ignore" style="position: absolute; top: 0; right: 0; bottom: 0; left: 0;" />
+</ui:UXML>
