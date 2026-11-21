@@ -2,16 +2,20 @@ using UnityEngine;
 
 public class Projectile : MonoBehaviour
 {
+    public float lifeTime = 2.0f;
+    float lifeTimer;
     Rigidbody2D rigidbody2d;
 
     void Awake()
     {
         rigidbody2d = GetComponent<Rigidbody2D>();
+        lifeTimer = lifeTime;
     }
 
     void Update()
     {
-        if (transform.position.magnitude > 100.0f)
+        lifeTimer -= Time.deltaTime;
+        if (lifeTimer < 0)
         {
             Destroy(gameObject);
         }
