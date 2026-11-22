@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -24,6 +25,15 @@ public class PlayerController : MonoBehaviour
     public float launchCooldown = 0.5f;
     public float projectileForce = 300f;
     float launchTimer;
+
+    // зворотний зв'язок: звук і короткий спалах спрайта
+    public AudioClip hitSound;
+    public AudioClip throwSound;
+    public AudioClip healSound;
+    public Color damageColor = new Color(0.94f, 0.66f, 0.09f);
+    public Color healColor = new Color(0.55f, 0.78f, 0.25f);
+    public float flashTime = 0.15f;
+    SpriteRenderer sprite;
 
     public InputAction TalkAction;
     private NonPlayerCharacter lastNonPlayerCharacter;
@@ -110,6 +120,13 @@ public class PlayerController : MonoBehaviour
             isInvincible = true;
             damageCooldown = timeInvincible;
             animator.SetTrigger("Hit");
+            PlaySound(hitSound);
+            StartCoroutine(Flash(damageColor));
+        }
+        else if (amount > 0)
+        {
+            PlaySound(healSound);
+            StartCoroutine(Flash(healColor));
         }
 
         currentHealth = Mathf.Clamp(currentHealth + amount,
@@ -118,8 +135,32 @@ public class PlayerController : MonoBehaviour
             currentHealth / (float)maxHealth);
     }
 
+    void PlaySound(AudioClip clip)
+    {
+        if (clip != null)
+        {
+            AudioSource.PlayClipAtPoint(clip, transform.position);
+        }
+    }
+
+    IEnumerator Flash(Color c)
+    {
+        if (sprite == null)
+        {
+            sprite = GetComponentInChildren<SpriteRenderer>();
+        }
+        if (sprite == null)
+        {
+            yield break;
+        }
+        sprite.color = c;
+        yield return new WaitForSeconds(flashTime);
+        sprite.color = Color.white;
+    }
+
     void Launch()
     {
+        PlaySound(throwSound);
         GameObject projectileObject = Instantiate(projectilePrefab,
             rigidbody2d.position + Vector2.up * 0.5f,
             Quaternion.identity);

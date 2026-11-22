@@ -6,6 +6,8 @@ public class GameManager : MonoBehaviour
     public PlayerController player;
     public UIHandler uiHandler;
     public float restartDelay = 3f;
+    public AudioClip winSound;
+    public AudioClip loseSound;
 
     EnemyController[] enemies;
     bool gameOver;
@@ -27,14 +29,24 @@ public class GameManager : MonoBehaviour
         if (player.health <= 0)
         {
             gameOver = true;
+            Play(loseSound);
             uiHandler.DisplayLoseScreen();
             Invoke(nameof(ReloadScene), restartDelay);
         }
         else if (AllEnemiesFixed())
         {
             gameOver = true;
+            Play(winSound);
             uiHandler.DisplayWinScreen();
             Invoke(nameof(ReloadScene), restartDelay);
+        }
+    }
+
+    void Play(AudioClip clip)
+    {
+        if (clip != null)
+        {
+            AudioSource.PlayClipAtPoint(clip, Camera.main.transform.position);
         }
     }
 

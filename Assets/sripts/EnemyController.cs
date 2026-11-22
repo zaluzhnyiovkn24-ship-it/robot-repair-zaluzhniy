@@ -70,8 +70,14 @@ public class EnemyController : MonoBehaviour
         }
     }
 
+    public AudioClip fixSound;
+
     public void Fix()
     {
+        if (fixSound != null)
+        {
+            AudioSource.PlayClipAtPoint(fixSound, transform.position);
+        }
         broken = false;
         rigidbody2d.simulated = false;
         animator.SetTrigger("Fixed");

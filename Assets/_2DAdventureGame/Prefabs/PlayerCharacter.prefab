@@ -228,6 +228,13 @@ MonoBehaviour:
     m_Flags: 0
     m_Priority: 0
   launchCooldown: 0.5
+  projectileForce: 300
+  hitSound: {fileID: 8300000, guid: c7d3a91ac32abbe47a8931a8ffc37bc6, type: 3}
+  throwSound: {fileID: 8300000, guid: c87de0cae68cdbb409eec8ba23a860d0, type: 3}
+  healSound: {fileID: 8300000, guid: 173a14cf06354c643b46b235f2a4f974, type: 3}
+  damageColor: {r: 0.94, g: 0.66, b: 0.09, a: 1}
+  healColor: {r: 0.55, g: 0.78, b: 0.25, a: 1}
+  flashTime: 0.15
   TalkAction:
     m_Name: Talk
     m_Type: 1
