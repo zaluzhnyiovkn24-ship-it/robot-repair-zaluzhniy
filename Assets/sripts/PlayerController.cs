@@ -22,6 +22,7 @@ public class PlayerController : MonoBehaviour
     public GameObject projectilePrefab;
     public InputAction LaunchAction;
     public float launchCooldown = 0.5f;
+    public float projectileForce = 300f;
     float launchTimer;
 
     public InputAction TalkAction;
@@ -125,7 +126,7 @@ public class PlayerController : MonoBehaviour
 
         Projectile projectile =
             projectileObject.GetComponent<Projectile>();
-        projectile.Launch(moveDirection, 300);
+        projectile.Launch(moveDirection, projectileForce);
 
         animator.SetTrigger("Launch");
     }
